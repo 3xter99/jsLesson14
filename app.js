@@ -15,9 +15,12 @@ document.addEventListener('DOMContentLoaded', () => {
         if (this.selector.split('')[0] === '.') {
             element = document.createElement('div')
             element.classList.add(this.selector.split('').slice(1).join(''))
-        } else {
+        } else if (this.selector.split('')[0] === '#'){
             element = document.createElement('p')
+            element.classList.add(this.selector.split('').slice(1).join(''))
             element.id = this.selector
+        } else {
+            console.error('Не тот селектор')
         }
         element.textContent = 'Привет'
         element.style.cssText = `height: ${this.height};
@@ -30,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
         body.append(element)
     }
 
-    let square = new DomElement('.ppp', '100px', '100px', 'red', '20px')
+    let square = new DomElement('ppp', '100px', '100px', 'red', '20px')
     square.createElem()
     let newSquare = document.querySelector('.ppp');
     console.log(newSquare);
