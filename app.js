@@ -17,8 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
             element.classList.add(this.selector.split('').slice(1).join(''))
         } else if (this.selector.split('')[0] === '#'){
             element = document.createElement('p')
-            element.classList.add(this.selector.split('').slice(1).join(''))
-            element.id = this.selector
+            element.id = this.selector.split('').slice(1).join('')
         } else {
             console.error('Не тот селектор')
         }
@@ -33,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
         body.append(element)
     }
 
-    let square = new DomElement('ppp', '100px', '100px', 'red', '20px')
+    let square = new DomElement('.ppp', '100px', '100px', 'red', '20px')
     square.createElem()
     let newSquare = document.querySelector('.ppp');
     console.log(newSquare);
