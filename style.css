@@ -1,0 +1,16 @@
+.startBtn {
+    width: 200px;
+    height: 50px;
+}
+.restBtn {
+    width: 200px;
+    height: 50px;
+}
+.img {
+    position: absolute;
+    margin-top: 50px;
+}
+img {
+    width: 200px;
+    height: 400px;
+}
